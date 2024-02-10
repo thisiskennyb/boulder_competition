@@ -101,13 +101,15 @@ WSGI_APPLICATION = 'jwt_auth_db.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+
 DATABASES = {
 "default": {
 "ENGINE": "django.db.backends.postgresql",
 "NAME": "jwt_auth_db", 
 "USER": "postgres",
 "PASSWORD": "postgres",
-"HOST": "localhost",
+"HOST": getenv('POSTGRES_HOST', 'localhost'),
 "PORT": 5432,
     }
 }

@@ -1,4 +1,4 @@
-FROM node:lts-alpine as builder
+FROM node:16 as builder
 
 WORKDIR /frontend
 
@@ -11,7 +11,7 @@ ARG VITE_BASE_URL=localhost
 ENV VITE_BASE_URL=$VITE_BASE_URL
 
 COPY ./frontend/package.json .
-RUN npm install
+RUN npm install && npm update
 COPY ./frontend .
 RUN npm run build
 

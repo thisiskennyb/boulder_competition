@@ -109,7 +109,7 @@ DATABASES = {
 "NAME": "jwt_auth_db", 
 "USER": "postgres",
 "PASSWORD": "postgres",
-"HOST": getenv('POSTGRES_HOST', 'localhost'),
+"HOST": 'localhost',
 "PORT": 5432,
     }
 }
